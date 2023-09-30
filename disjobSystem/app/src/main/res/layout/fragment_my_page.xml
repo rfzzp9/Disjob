@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MyPageFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/info"
+            android:layout_width="320dp"
+            android:layout_height="245dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/round_shape_pink2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ProgressBar
+                android:id="@+id/circularProgressBar1"
+                android:progressTint="@color/pink"
+                android:indeterminateDrawable="@drawable/circle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:indeterminate="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/explain1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/jua_regular"
+                app:layout_constraintTop_toBottomOf="@+id/circularProgressBar1"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                app:layout_constraintEnd_toEndOf="@+id/circularProgressBar1"
+                android:text="고객 정보를 가져오는 중입니다."
+                android:layout_marginTop="11dp"
+                />
+
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/img_23"
+                app:layout_constraintEnd_toEndOf="@id/info"
+                app:layout_constraintTop_toTopOf="@id/info" />
+
+            <TextView
+                android:id="@+id/myId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나의 ID :"
+                android:fontFamily="@font/jua_regular"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/info"
+                app:layout_constraintTop_toTopOf="@+id/info"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="45dp"
+                />
+
+            <TextView
+                android:id="@+id/myEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua_regular"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/myId"
+                app:layout_constraintTop_toTopOf="@+id/myId"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+                android:id="@+id/myDis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나의 장애유형 :"
+                android:fontFamily="@font/jua_regular"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/info"
+                app:layout_constraintTop_toBottomOf="@+id/myId"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/myDisAnswer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua_regular"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/myDis"
+                app:layout_constraintTop_toTopOf="@+id/myDis"
+                android:layout_marginStart="5dp"
+                android:autoSizeMinTextSize="10sp"
+                app:autoSizeMaxTextSize="15sp"
+                android:maxLines="3"
+                app:autoSizeStepGranularity="1sp"
+
+                />
+
+            <TextView
+                android:id="@+id/myLoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설정된 위치 :"
+                android:fontFamily="@font/jua_regular"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/info"
+                app:layout_constraintTop_toBottomOf="@+id/myDis"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/myLocAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua_regular"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/myLoc"
+                app:layout_constraintTop_toTopOf="@+id/myLoc"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+                android:id="@+id/lastLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="접속 일자 :"
+                android:fontFamily="@font/jua_regular"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/info"
+                app:layout_constraintTop_toBottomOf="@+id/myLoc"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/lastLoginAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua_regular"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/lastLogin"
+                app:layout_constraintTop_toTopOf="@+id/lastLogin"
+                android:layout_marginStart="5dp"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageButton
+            android:src="@drawable/img_21"
+            android:id="@+id/pwChange_btn"
+            android:layout_width="143dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info"
+            android:layout_marginTop="30dp"
+            />
+
+        <ImageButton
+            android:src="@drawable/img_22"
+            android:id="@+id/logout_btn"
+            android:layout_width="143dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pwChange_btn"
+            />
+
+        <ProgressBar
+            android:id="@+id/circularProgressBar"
+            android:progressTint="@color/pink"
+            android:indeterminateDrawable="@drawable/circle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminate="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/jua_regular"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+            android:text="로그아웃 중입니다."
+            android:layout_marginTop="10dp"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AiResultHomeFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|start"
+            app:layout_constraintTop_toTopOf="@+id/constraint"
+            app:layout_constraintStart_toStartOf="@+id/constraint"
+            app:layout_constraintEnd_toEndOf="@+id/constraint"
+            >
+
+            <ImageView
+                android:id="@+id/result_area"
+                android:src="@drawable/img_38"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/resu"
+                android:text="-"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#444447"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/result_area"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/resultAnswer_area"
+                android:textSize="15sp"
+                android:textColor="#444447"
+                android:layout_marginStart="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/result_area"
+                app:layout_constraintStart_toEndOf="@id/resu"
+                />
+
+            <ImageView
+                android:id="@+id/result_disabled"
+                android:src="@drawable/img_39"
+                app:layout_constraintTop_toBottomOf="@+id/resultAnswer_area"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="18sp"
+                android:layout_width="110dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="12dp"
+                />
+
+            <TextView
+                android:id="@+id/res"
+                android:text="-"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#444447"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/result_disabled"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/resultAnswer_disabled"
+                android:textSize="15sp"
+                android:textColor="#444447"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/result_disabled"
+                app:layout_constraintStart_toEndOf="@id/res"
+                android:layout_marginStart="4dp"
+                />
+
+
+            <ImageButton
+                android:id="@+id/setting"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/img_13"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/round_shape_white"
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:queryHint="검색어를 입력하세요"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="textStart"
+            android:background="@drawable/round_shape3"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            android:textCursorDrawable="@drawable/cursor"
+            />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/searchText"
+            >
+
+            <TextView
+                android:id="@+id/jobCnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua_regular"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/input_disabled"
+                android:text="건의 직장이 추천되었습니다."
+                android:fontFamily="@font/jua_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/jobCnt"
+                app:layout_constraintTop_toTopOf="@id/jobCnt"
+                />
+
+            <TextView
+                android:id="@+id/explain2"
+                android:text="(법정근로시간을 기준으로 산정한 시급입니다.)"
+                android:fontFamily="@font/jua_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/jobCnt"
+                app:layout_constraintTop_toBottomOf="@id/jobCnt"
+                />
+
+            <android.support.v4.widget.Space
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                app:layout_constraintTop_toBottomOf="@id/explain2"
+                ></android.support.v4.widget.Space>
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/job_list2"
+            app:layout_constraintTop_toBottomOf="@+id/result"
+            android:scrollbarThumbVertical="@color/pink"
+            android:scrollbarFadeDuration="0"
+            />
+
+        <ProgressBar
+            android:id="@+id/circularProgressBar"
+            android:progressTint="@color/pink"
+            android:indeterminateDrawable="@drawable/circle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminate="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp"
+            />
+
+        <TextView
+            android:id="@+id/explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/jua_regular"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+            android:text="서버에서 직장정보를 불러오는 중입니다."
+            android:layout_marginTop="10dp"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AiJobDetailsFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/company_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="14dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_company"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backwards" />
+
+            <TextView
+                android:id="@+id/jobName"
+                android:text="기업정보"
+                android:textSize="24sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintTop_toTopOf="@id/company_icon"
+                app:layout_constraintStart_toEndOf="@id/company_icon"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/jua_regular"
+                android:textColor="#323131"
+                />
+
+
+            <ImageButton
+                android:id="@+id/backwards"
+                android:layout_width="80dp"
+                android:layout_height="26dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_15"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/white"
+                />
+
+
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/jobinfo"
+                app:layout_constraintTop_toBottomOf="@id/jobName"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/round_shape2">
+
+                <ProgressBar
+                    android:id="@+id/circularProgressBar"
+                    android:progressTint="@color/pink"
+                    android:indeterminateDrawable="@drawable/circle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:indeterminate="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/jua_regular"
+                    app:layout_constraintTop_toBottomOf="@+id/circularProgressBar"
+                    app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                    app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+                    android:text="서버에서 직장 상세 정보를 불러오는 중입니다."
+                    android:layout_marginTop="10dp"
+                    />
+
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.3"
+                    />
+
+                <TextView
+                    android:id="@+id/companyName"
+                    android:text=""
+                    android:textSize="19sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/employmentType"
+                    android:text="모집직종"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#222121"
+                    app:layout_constraintStart_toStartOf="@id/companyName"
+                    app:layout_constraintTop_toBottomOf="@id/companyName"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="6dp"
+                    />
+                <TextView
+                    android:id="@+id/employmentTypeResult"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toTopOf="@+id/employmentType"
+                    app:layout_constraintBottom_toBottomOf="@+id/employmentType"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginStart="13dp"
+                    android:autoSizeMinTextSize="10sp"
+                    app:autoSizeMaxTextSize="15sp"
+                    android:maxLines="3"
+                    app:autoSizeStepGranularity="1sp"
+                    />
+
+                <TextView
+                    android:id="@+id/hireType"
+                    android:text="고용형태"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#222121"
+                    app:layout_constraintStart_toStartOf="@id/employmentType"
+                    app:layout_constraintTop_toBottomOf="@id/employmentType"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:id="@+id/hireTypeResult"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBaseline_toBaselineOf="@id/hireType"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    />
+                <TextView
+                    android:id="@+id/pay"
+                    android:text="급여"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#222121"
+                    app:layout_constraintStart_toStartOf="@id/hireType"
+                    app:layout_constraintTop_toBottomOf="@id/hireType"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:id="@+id/payResult"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBaseline_toBaselineOf="@id/pay"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    android:layout_marginStart="10dp"
+                    />
+                <TextView
+                    android:id="@+id/payAbout"
+                    android:text="약"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBaseline_toBaselineOf="@id/payResult"
+                    app:layout_constraintEnd_toStartOf="@id/payResult"
+                    android:layout_marginEnd="2dp"
+                    />
+                <TextView
+                    android:id="@+id/payUnit"
+                    android:text="원"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBaseline_toBaselineOf="@id/payResult"
+                    app:layout_constraintStart_toEndOf="@id/payResult"
+                    />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:text="근무지 주소"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#222121"
+                    app:layout_constraintStart_toStartOf="@id/pay"
+                    app:layout_constraintTop_toBottomOf="@id/pay"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:id="@+id/addressResult"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toTopOf="@+id/address"
+                    app:layout_constraintBottom_toBottomOf="@+id/address"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginStart="13dp"
+                    android:autoSizeMinTextSize="10sp"
+                    app:autoSizeMaxTextSize="15sp"
+                    android:maxLines="3"
+                    app:autoSizeStepGranularity="1sp"
+                    />
+                <TextView
+                    android:id="@+id/phoneNumber"
+                    android:text="연락처"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#222121"
+                    app:layout_constraintStart_toStartOf="@id/address"
+                    app:layout_constraintTop_toBottomOf="@id/address"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/phoneNumberResult"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBaseline_toBaselineOf="@id/phoneNumber"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline"
+                    android:layout_marginBottom="10dp"
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/starButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_1"
+                    android:focusableInTouchMode="true"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#F8EEFA"
+                    />
+
+                <ImageView
+                    android:id="@+id/starText"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/img_18"
+                    android:focusableInTouchMode="true"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/starButton"
+                    android:layout_marginEnd="10dp"
+                    android:background="#F8EEFA"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                app:layout_constraintTop_toBottomOf="@id/jobinfo"
+                ></android.support.v4.widget.Space>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <WebView
+                android:id="@+id/commentView"
+                android:layout_width="352dp"
+                android:layout_height="match_parent"
+                android:windowSoftInputMode="adjustResize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="10dp"
+                />
+
+            <ProgressBar
+                android:id="@+id/circularProgressBar1"
+                android:progressTint="@color/pink"
+                android:indeterminateDrawable="@drawable/circle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:indeterminate="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="15dp"
+                />
+
+            <TextView
+                android:id="@+id/explain1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/jua_regular"
+                app:layout_constraintTop_toBottomOf="@+id/circularProgressBar1"
+                app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                app:layout_constraintEnd_toEndOf="@+id/circularProgressBar1"
+                android:text="서버에서 댓글 정보를 불러오는 중입니다."
+                />
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

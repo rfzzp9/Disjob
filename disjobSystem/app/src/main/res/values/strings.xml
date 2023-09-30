@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">rec</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="comma_number">%,d</string>
+
+    <string-array name="spinner_disabled">
+        <item>선택</item>
+        <item>뇌병변장애-1급</item>
+        <item>뇌병변장애-2급</item>
+        <item>뇌병변장애-3급</item>
+        <item>뇌병변장애-4급</item>
+        <item>뇌병변장애-5급</item>
+        <item>뇌병변장애-6급</item>
+        <item>시각장애-1급</item>
+        <item>시각장애-2급</item>
+        <item>시각장애-3급</item>
+        <item>시각장애-4급</item>
+        <item>시각장애-5급</item>
+        <item>시각장애-6급</item>
+        <item>안면장애</item>
+        <item>언어장애-3급</item>
+        <item>언어장애-4급-1호</item>
+        <item>언어장애-4급-2호</item>
+        <item>언어장애-4급-3호</item>
+        <item>언어장애-4급-4호</item>
+        <item>언어장애-4급-5호</item>
+        <item>지체장애-상지관절장애-4급</item>
+        <item>지체장애-상지관절장애-6급</item>
+        <item>지체장애-상지기능장애-1급-1호</item>
+        <item>지체장애-상지기능장애-2급-1호</item>
+        <item>지체장애-상지기능장애-2급-2호</item>
+        <item>지체장애-상지기능장애-3급-1호</item>
+        <item>지체장애-상지기능장애-3급-2호</item>
+        <item>지체장애-상지기능장애-3급-3호</item>
+        <item>지체장애-상지절단장애</item>
+        <item>지체장애-하지관절장애-4급-2호</item>
+        <item>지체장애-하지관절장애-5급-1호</item>
+        <item>지체장애-하지관절장애-5급-2호</item>
+        <item>지체장애-하지관절장애-6급-2호</item>
+        <item>지체장애-하지절단장애</item>
+        <item>청각장애-2급</item>
+        <item>청각장애-3급</item>
+        <item>청각장애-4급</item>
+        <item>청각장애-5급</item>
+        <item>청각장애-6급</item>
+
+    </string-array>
+
+    <string-array name="spinner_area">
+        <item>선택</item>
+        <item>서울특별시</item>
+        <item>대구광역시</item>
+        <item>강원도 강릉시</item>
+        <item>강원도 동해시</item>
+        <item>강원도 삼척시</item>
+        <item>강원도 양양군</item>
+        <item>강원도 영월군</item>
+        <item>강원도 원주시</item>
+        <item>강원도 정선군</item>
+        <item>강원도 춘천시</item>
+        <item>강원도 평창군</item>
+        <item>경기도 가평군</item>
+        <item>경기도 고양시</item>
+        <item>경기도 과천시</item>
+        <item>경기도 광주시</item>
+        <item>경기도 구리시</item>
+        <item>경기도 군포시</item>
+        <item>경기도 김포시</item>
+        <item>경기도 남양주시</item>
+        <item>경기도 부천시</item>
+        <item>경기도 성남시</item>
+        <item>경기도 수원시</item>
+    </string-array>
+</resources>
