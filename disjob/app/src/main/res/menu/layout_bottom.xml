@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/aiMenu"
+        android:title="AI추천"
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@drawable/img_27"
+        />
+    <item
+        android:id="@+id/boardMenu"
+        android:title="게시판"
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@drawable/img_28"
+
+        />
+    <item
+        android:id="@+id/scrapMenu"
+        android:title="스크랩"
+        android:enabled="true"
+        android:visible="true"
+        android:icon="@drawable/img_2"
+        />
+</menu>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/round_shape_recycler"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageButton
+                android:id="@+id/starBtn"
+                android:src="@drawable/img_2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/white"
+                android:adjustViewBounds="true"
+                android:focusableInTouchMode="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/jobName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/starBtn"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/unit"
+                android:text="원"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="9dp"
+                />
+
+            <TextView
+                android:id="@+id/about"
+                android:text="약"
+                android:textColor="#6B6A6C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/hourlyMoney"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="1dp"
+                />
+
+            <TextView
+                android:id="@+id/hourlyMoney"
+                android:textColor="#7E2727"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/unit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp"
+                />
+
+            <ImageView
+                android:id="@+id/area_img"
+                android:src="@drawable/img_14"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/white"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toStartOf="@id/jobName"
+                app:layout_constraintTop_toBottomOf="@id/jobName"
+                android:background="@color/white"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:id="@+id/area"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintStart_toEndOf="@id/area_img"
+                app:layout_constraintTop_toBottomOf="@id/jobName"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="1dp"
+                android:textColor="#6B6A6C"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/line"
+                android:src="@drawable/img_line"
+                android:layout_width="10dp"
+                android:layout_height="37dp"
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/white"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toEndOf="@id/area"
+                app:layout_constraintTop_toBottomOf="@id/jobName"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/business_img"
+                android:src="@drawable/img_business"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/white"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toEndOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/jobName"
+                android:background="@color/white"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:id="@+id/job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintStart_toEndOf="@id/business_img"
+                app:layout_constraintTop_toBottomOf="@id/jobName"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="1dp"
+                android:textColor="#6B6A6C"
+                android:textStyle="bold"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutDialog"
+    android:padding="35dp"
+    android:layout_margin="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/dialog_background"
+        android:id="@+id/dialog_background"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTitle"
+            android:background="@drawable/title_pink_background"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textMessage_id"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jua_regular"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:text="고객님, 반갑습니다."
+                />
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textMessage3"
+            android:textColor="@color/black"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="로그인 화면으로 이동합니다."
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="확인"
+            android:fontFamily="@font/jua_regular" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

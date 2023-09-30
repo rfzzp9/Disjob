@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AiSelectHomeFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/layout"
+        >
+
+
+        <ImageView
+            android:id="@+id/input_area"
+            android:src="@drawable/img_4"
+            android:layout_width="195dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="textStart"
+            />
+
+        <ImageButton
+            android:id="@+id/input_area2"
+            android:src="@drawable/img_43"
+            android:layout_width="137dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="3dp"
+            android:textAlignment="textStart"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
+            />
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageButton
+                    android:id="@+id/searchBtn"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:src="@drawable/img_8"
+                    android:scaleType="fitCenter"
+                    android:backgroundTint="#E3B3FF"
+                    android:background="@drawable/round_shape"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="48dp"
+                    />
+                <AutoCompleteTextView
+                    android:id="@+id/edit_area"
+                    android:layout_width="190dp"
+                    android:layout_height="40dp"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="7dp"
+                    android:hint="예) 서울특별시 중구"
+                    android:background="@drawable/edittext_border"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:textColorHint="#555555"
+                    android:completionThreshold="2"
+                    android:popupBackground="@color/white"/>
+
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/input_disabled"
+            android:src="@drawable/img_3"
+            android:layout_width="230dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="8dp"
+            />
+
+        <ImageView
+            android:id="@+id/input_disabled_maximum"
+            android:src="@drawable/img_5"
+            android:layout_width="117dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <Spinner
+                android:id="@+id/spinner_disabled1"
+                android:layout_width="267dp"
+                android:layout_height="33dp"
+                android:textSize="1sp"
+                android:layout_marginTop="15dp"
+                android:entries="@array/spinner_disabled"
+                android:background="@drawable/spinner_arrow2"
+                android:spinnerMode="dropdown"
+                android:layout_centerInParent="true"
+                android:dropDownWidth="260dp"
+                android:popupBackground="@drawable/spinner_arrow"
+                ></Spinner>
+
+            <Spinner
+                android:id="@+id/spinner_disabled2"
+                android:layout_width="267dp"
+                android:layout_height="33dp"
+                android:textSize="1sp"
+                android:layout_marginTop="15dp"
+                android:entries="@array/spinner_disabled"
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="260dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/spinner_arrow2"
+                android:popupBackground="@drawable/spinner_arrow"
+                ></Spinner>
+
+            <Spinner
+                android:id="@+id/spinner_disabled3"
+                android:layout_width="267dp"
+                android:layout_height="33dp"
+                android:textSize="1sp"
+                android:layout_marginTop="15dp"
+                android:entries="@array/spinner_disabled"
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="260dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/spinner_arrow2"
+                android:popupBackground="@drawable/spinner_arrow"
+                ></Spinner>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            >
+
+            <ImageButton
+                android:id="@+id/reset_btn"
+                android:layout_width="130dp"
+                android:layout_height="88dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_shape"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_6"
+                android:layout_marginEnd="15dp"
+
+                />
+
+            <ImageButton
+                android:id="@+id/next_btn"
+                android:layout_width="130dp"
+                android:layout_height="88dp"
+                android:src="@drawable/img_7"
+                android:scaleType="fitCenter"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/round_shape"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

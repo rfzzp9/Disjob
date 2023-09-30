@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#EFE1F6" />
+    <corners android:radius="20dp" /> <!-- 반지름 값은 원하는 모양에 맞게 조절 가능 -->
+</shape>
